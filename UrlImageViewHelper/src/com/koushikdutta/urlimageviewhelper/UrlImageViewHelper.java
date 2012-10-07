@@ -421,8 +421,10 @@ public final class UrlImageViewHelper {
         final int th;
         if (mMetrics == null)
             prepareResources(context);
-        tw = mMetrics.widthPixels;
-        th = mMetrics.heightPixels;
+        
+        tw = imageView.getWidth();
+        th = imageView.getHeight();
+        
 
         if (mDeadCache == null) {
             mDeadCache = new UrlLruCache(getHeapSize(context) / 8);
