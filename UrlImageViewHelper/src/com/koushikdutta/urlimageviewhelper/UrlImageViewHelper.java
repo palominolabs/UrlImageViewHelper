@@ -92,6 +92,8 @@ public final class UrlImageViewHelper {
             return new ZombieDrawable(url, bd);
         } catch (final IOException e) {
             return null;
+        } catch (OutOfMemoryError e) {
+        	return null;
         }
     }
 
